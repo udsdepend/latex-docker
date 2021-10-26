@@ -1,5 +1,6 @@
-FROM debian:testing
+FROM ubuntu:focal
 
+ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y \
   texlive-full && \
   # Removing documentation packages *after* installing them is kind of hacky,
