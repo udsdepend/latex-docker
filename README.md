@@ -23,7 +23,7 @@ sudo docker build --pull --cache-from udsdepend/latex:tag --tag udsdepend/latex:
 :b: You can alternatively use the Git URL directly. Make sure to specify the desired branch/tag:
 
 ```bash
-sudo docker build --pull --cache-from udsdepend/latex:tag --tag udsdepend/latex:dev "https://github.com/udsdepend/latex-docker.git#tag"
+sudo docker build --pull --cache-from udsdepend/latex:tag --tag udsdepend/latex:tag "https://github.com/udsdepend/latex-docker.git#tag"
 ```
 
 ## Verifying the TeX Live Installation:
