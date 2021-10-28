@@ -48,5 +48,12 @@ Before pushing a new tag to Docker Hub, please make sure to follow these steps t
 ## Pushing a New Tag to Docker Hub
 
 ```bash
+# log in to Docker Hub
+sudo docker login
+
+# push the image
 sudo docker push udsdepend/latex:tag
+
+# remove the saved credentials
+sudo docker logout
 ```
