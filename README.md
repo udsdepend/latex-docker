@@ -32,7 +32,7 @@ Before pushing a new tag to Docker Hub, please make sure to follow these steps t
 
 1.  Processing the LaTeX Sample Document:
     ```bash
-    sudo docker run --rm -it udsdepend/latex pdflatex sample2e
+    sudo docker run --rm -it udsdepend/latex:tag pdflatex sample2e
     ```
     Check the output log for warnings or errors. The final lines should look like:
     ```
@@ -41,7 +41,7 @@ Before pushing a new tag to Docker Hub, please make sure to follow these steps t
     ```
 2.  Run the LaTeX Test Program:
     ```bash
-    sudo docker run --rm -it udsdepend/latex pdflatex ltxcheck
+    sudo docker run --rm -it udsdepend/latex:tag pdflatex ltxcheck
     ```
     Follow the on-screen instructions. Especially make sure that the output contains no error messages starting with `! BAD`.
 
