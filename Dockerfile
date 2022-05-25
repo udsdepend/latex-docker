@@ -19,3 +19,6 @@ RUN wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz \
 # Set up TeXLive Fonts for System-wide Use
 RUN cp $(kpsexpand '$TEXMFSYSVAR')/fonts/conf/texlive-fontconfig.conf /etc/fonts/conf.d/09-texlive.conf \
     && fc-cache -fsv
+
+# Avoid luaftload updating on every compile
+RUN luaotfload-tool --update
