@@ -5,7 +5,9 @@ RUN apt-get update && apt-get install -y \
   # for syntax highlighting with minted
   python3-pygments python-is-python3 \
   # for gnuplot backend of pgfplots
-  gnuplot-nox && \
+  gnuplot-nox \
+  # compile documents/figures using Makefiles
+  make && \
   # Removing documentation packages *after* installing them is kind of hacky,
   # but it only adds some overhead while building the image.
   apt-get --purge remove -y .\*-doc$ && \
